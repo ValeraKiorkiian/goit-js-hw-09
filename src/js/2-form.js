@@ -20,7 +20,7 @@ form.addEventListener(`submit`, onSubEvt);
 const LOCAL_KEY = 'feedback-form-state';
 
 function onInputEvt(event) {
-  formData[event.target.name] = event.target.value;
+  formData[event.target.name] = event.target.value.trim();
   const localData = localStorage.setItem(LOCAL_KEY, JSON.stringify(formData));
   console.log(localData);
 }
